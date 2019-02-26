@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background: black;
+}
+.mu{
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  color: white;
+  border-radius: 50%;
+  left: 120px;
+  box-shadow: 150px 240px 0 0 white, 300px 240px 0 0 white;
+
+}
+
+.mu::before{
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 120px;
+  width: 210px;
+  height: 120px;
+  border-bottom: 180px solid white;
+  border-radius: 0 0 0 100%;
+  transform: rotate(-40deg);
+  transform-origin: right 210px;
+  transition: all 0.5s;
+}
+
+.mu::after{
+  content: "";
+  position: absolute;
+  left: 390px;
+  top: 120px;
+  width: 210px;
+  height: 120px;
+  border-bottom: 180px solid white;
+  border-radius: 0 0 100% 0;
+  transform: rotate(40deg);
+  transform-origin: left 210px;
+  transition: all 0.5s;
+}
+
+.mu:hover:after{
+  transform: rotate(30deg);
+}
+
+.mu:hover:before{
+  transform: rotate(-30deg);
+}
